@@ -1,10 +1,62 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS",
+    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.content h2 {
+  color: rgb(26, 91, 118);
+}
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+  border-bottom: 2px solid black;
+}
+
+.Navbar h1 {
+  color: rgb(64, 191, 245);
+  cursor: pointer;
+}
+
+.Navbar .links {
+  margin-left: auto;
+}
+
+.Navbar a {
+  text-decoration: none;
+  padding: 8px;
+  margin: 8px;
+}
+
+.Navbar a:hover {
+  color: rgb(64, 191, 245);
+  border-bottom: 1px solid rgb(64, 191, 245);
+  border-radius: 10px;
+}
+
+.Home h2 {
+  color: rgb(26, 91, 118);
+}
+
+.Home button {
+  margin-left: 10px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.Home button:hover {
+  border: 1px solid black;
+  background-color: rgb(26, 91, 118);
+  color: rgb(251, 251, 254);
 }
