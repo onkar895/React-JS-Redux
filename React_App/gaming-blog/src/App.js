@@ -10,6 +10,7 @@ function App() {
   const blogLikes = 100;
   // const author = {name:'onkar',Age:20,blogWritten:40}
   return (
+    // If we use class instead of className for JSX, we're going to get a warning saying class is an invalid DOM property:
     <div className="App">
       <Navbar />
       <Homepage />
@@ -21,18 +22,18 @@ function App() {
         <span>Learn React</span>
 
         <div className="content">
-         
-             <p>{blogTitle}</p>
-             <p>Hurrah!, You have got { subs }  subscribers and { blogLikes }  likes.</p>
-             <p>[1,2,3,4,5,6,7,8,9,10]</p>
-             <p>{Math.random*10}</p>
-             {/* {<p>{author}</p>} */}
-             <a href="https://react.dev/learn">Learn React</a> 
-                 <br />
-             <a href="{link}">Learn React</a>
-             
+
+          <p>{blogTitle}</p>
+          <p>Hurrah!, You have got {subs}  subscribers and {blogLikes}  likes.</p>
+          <p>[1,2,3,4,5,6,7,8,9,10]</p>
+          <p>{Math.random * 10}</p>
+          {/* {<p>{author}</p>} */}
+          <a href="https://react.dev/learn">Learn React</a>
+          <br />
+          <a href="{link}">Learn React</a>
+
         </div>
-        
+
       </header>
     </div>
   );
