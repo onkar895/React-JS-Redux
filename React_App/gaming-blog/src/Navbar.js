@@ -6,7 +6,8 @@ const navbar = () => {
             <div className="links">
                 <a href="./" style={{            // Inline styling for blog,  blue curly-bracket is for the dynamic values and yellow is for the objects means key value pairs.
                     color: "rgb(64, 191, 245)",
-                    borderBottom: "1px solid rgb(64, 191, 245)",
+                    fontWeight: "bold",
+                    borderBottom: "2px solid rgb(64, 191, 245)",
                     borderRadius: "10px"
                 }}>Home</a>
 
