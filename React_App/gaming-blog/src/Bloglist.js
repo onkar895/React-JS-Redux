@@ -10,21 +10,21 @@ const Bloglist = ({ blogs, title, deleteBlog }) => {
     <div className='blog-list'>
       <h1>{title}</h1>
       {blogs.map((blog) => (
-        <div className='blog-preview' key={blog.id}>
-          <h2>Title: {blog.title}</h2>
-          <span>
-            <button className="delete-button " onClick={() => deleteBlog(blog.id)}>
-              Delete
-            </button>
-          </span>
-          <p>
-            Author: {blog.author}
-          </p>
-          <p>
-            {blog.body}
-          </p>
-        </div>
-      ))}
+                           <div className='blog-preview' key={blog.id}>
+                             <h2>Title: {blog.title}</h2>
+                             <span>
+                               <button className="delete-button " onClick={() => deleteBlog(blog.id)}>
+                                 Delete
+                               </button>
+                             </span>
+                             <p>
+                               Author: {blog.author}
+                             </p>
+                             <p>
+                               {blog.body}
+                             </p>
+                           </div>
+                         ))}
     </div>
   )
 }

@@ -7,7 +7,6 @@
 //     2. Absence of 'this' Keyword
 //     3. Solution without using state
 
-
 // function welcome(props) {
 //     return <h1>Hello, {props.name}</h1>
 // }

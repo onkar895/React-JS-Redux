@@ -36,11 +36,6 @@
         try to find the most efficient way to update the browser’s DOM.</li>
     </ul> 
 
-    <ul><strong>Writing markup with JSX: { }</strong> 
-        <li>The markup syntax you’ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience.</li>
-        <li>JSX is stricter than HTML. You have to close tags like <br />. Your component also can’t return multiple JSX tags. </li>
-        <li>You have to wrap them into a shared parent, like a <div>...</div> or an empty <>...</> wrapper:</li>
-    </ul> <hr>
 
     <h2>NPX: (Node Package Execute)</h2>
     <ul>1. NPX is a 'npm' package runner which gets installed when u install node. <br>
@@ -97,6 +92,20 @@
           <li>The components always starts with a capital letter in 'App.js' file. For ex. 'App', 'MyButton' etc. That’s how you know it’s a React component. 
           React component names must always start with a capital letter, while HTML tags must be lowercase.</li>
     </ul>
+
+     <ul><h2>2. Writing markup with JSX: { }</h2> 
+        <li>The markup syntax you’ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience.</li>
+        <li>JSX is stricter than HTML. You have to close tags like <br />. Your component also can’t return multiple JSX tags. </li>
+        <li>You have to wrap them into a shared parent, like a <div>...</div> or an empty <>...</> wrapper:</li>
+         <li>JSX lets you put markup into JavaScript. Curly braces let you “escape back” into JavaScript so that you can embed some variable from your code and display it to the user. <br> For example, this will display user.name:   return (
+  <h4>{user.name}</h4>);</li>
+  <li>JSX lets you put markup into JavaScript. Curly braces let you “escape back” into JavaScript so that you can embed some variable from your code and display it to the user.</li>
+  <li>JSX lets you write HTML - like markup inside a JavaScript file, keeping rendering logic and content in the same place.</li>
+  <li> Sometimes you will want to add a little JavaScript logic or reference a dynamic property inside that markup.In this situation, you can use curly braces in your JSX to “open a window” to JavaScript:</li>
+    </ul> <hr>
+
+
+
 </body>
 
 
