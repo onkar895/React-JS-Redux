@@ -7,6 +7,7 @@ import TodoList from './JSX/Todolist'
 import Hello from './Hooks/Props'
 import Message from './Hooks/UseState'
 import Car from './Hooks/UseState'
+import ExampleClass from './Hooks/Props'
 
 // Here App() is a Root function and using Functonal component
 function App () {
@@ -18,7 +19,8 @@ function App () {
       {/* <MyButton/> */}
       <Hello name='Diana' Actorname='Wonder Women' />
       <Message />
-      <Car/>
+      <Car />
+      <ExampleClass />
     </div>
   )
 }

@@ -175,7 +175,8 @@ class Car extends Component {
 
   render () {
     return (
-      <div>
+        // Always remember use fragement  '<></>'  instead of <div></div>
+      <>
         <h1>My First Car</h1>
         <p>
           It is a
@@ -184,10 +185,10 @@ class Car extends Component {
           {this.state.model} made in
           {this.state.year}. 🚙
         </p>
-        <button onClick={this.changeColor()}>
+        <button onClick={() => this.changeColor()}>
           ClickToChangeColor
         </button>
-      </div>
+      </>
     )
   }
 }
