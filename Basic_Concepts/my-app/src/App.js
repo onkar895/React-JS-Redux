@@ -19,8 +19,12 @@ function App () {
       {/* <MyButton/> */}
       <Hello name='Diana' Actorname='Wonder Women' />
       <Message />
+      <br/>
       <Car />
+      <br/>
+      <br/>
       <ExampleClass />
+      <parent/>
     </div>
   )
 }

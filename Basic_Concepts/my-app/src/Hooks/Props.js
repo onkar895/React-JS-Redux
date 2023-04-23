@@ -8,6 +8,8 @@
 // In functional components props will be used as :  'props.'
 // In Class components props will be used as :  'this.props'
 
+// Example 1:
+
 // import React from 'react'
 
 // const Hello = (props) => {
@@ -36,6 +38,25 @@
 // }
 
 // export default ExampleClass
+
+// Example 2:  
+// How to pass data to one component to another
+
+// import React from 'react'
+// import Child from './Props1'
+
+// const Parent = () => {
+//   const data = 'Hello Everyone'
+//   return (
+//     <div>
+//       <Child data={data} />
+//     </div>
+//   )
+// }
+
+// export default Parent
+
+// Example 3:
 
 import React, { Component } from 'react'
 import ChildComponent from './Props1'
@@ -66,3 +87,65 @@ class ParentComponent extends Component {
 }
 
 export default ParentComponent
+
+// Multiple props in single event handler:
+
+// import React from 'react'
+// export default class App extends React.Component {
+
+//   sayHi = () => {
+//     alert("Hi from GFG")
+//   }
+//   sayHello = () => {
+//     alert("Hello from GFG")
+//   }
+
+//   render() {
+//     return (
+//       <div style={{ marginLeft: 50 }}>
+//         <Child1 m1={this.sayHi} 
+//                 m2={this.sayHello} >
+//         </Child1>
+//         <br></br>
+//         <Child2 m1={this.sayHi} 
+//                 m2={this.sayHello}>
+//         </Child2>
+//       </div>
+//     )
+//   }
+// }
+
+// // Method 1
+// class Child1 extends React.Component {
+
+//   seperatemethod = () => {
+//     this.props.m1()
+//     this.props.m2()
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <button onClick={this.seperatemethod}>
+//           Hello Hi from GFG
+//         </button>
+//       </div>
+//     )
+//   }
+// }
+
+// // Method 2
+// class Child2 extends React.Component {
+
+//   render() {
+//     return (
+//       <div>
+//         <button onClick={() => {
+//           this.props.m1()
+//           this.props.m2()
+//         }}
+//         >Hello hi from GFG</button>
+//       </div>
+//     )
+//   }
+// }
