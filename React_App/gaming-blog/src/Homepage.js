@@ -1,25 +1,4 @@
-// Hooks:
-
-// 1. In React, hooks are functions that give class-like abilities to function components, including state and side - effects.
-// 2. There are a few rules when using hooks, including the following:
-//       1.Hooks must be called from React functions(i.e.components or custom hooks) and not from a regular JavaScript function.
-//       2.Hooks should not be called inside of a loop, condition, or nested function.Instead, hooks should be called at the top level of a React function so they render in the same order every time.
-//       3.While there are standard React hooks, like useState() and useEffect(), there are also custom - made hooks!
-// 3. Hooks are imported at the top of a file from the react library:
-// 4. Syntax:   import React, { useHook } from 'react'
-
-// Example 1:
-
-// import { useState } from "react"
-// function App() {
-//   const click = useState('GeeksForGeeks')
-//   return (
-//     <h1>Welcome to {click}</h1>
-//   )
-// }
-// export default App
-
-// Example 2:
+// Example of useSate:
 
 // import { useState } from "react"
 // useState: Returns the current state of the component and its setter function.
@@ -107,6 +86,7 @@
 
 // export default App
 
+// UseState and Props:
 import { useState } from 'react'
 // useState: Returns the current state of the component and its setter function.
 import Bloglist from './Bloglist'

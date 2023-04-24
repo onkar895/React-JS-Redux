@@ -1,4 +1,8 @@
 // Props:
+
+// We know that components in React are used again and again in the UI, but we don’t normally render the same component with the same data.
+// Sometimes we need to change the content inside a component.Props come to play in these cases, as they are passed into the component and the user.
+
 // 1. In React, components are able to use props, or “properties”, to display and share data throughout the application.
 // 2. In other words, props is the information that gets passed from one component to another.
 // 3. A component’s props is an object. It holds information about that component.
@@ -115,7 +119,7 @@ export default ParentComponent
 //   }
 // }
 
-// // Method 1
+// Method 1
 // class Child1 extends React.Component {
 
 //   seperatemethod = () => {
@@ -134,7 +138,7 @@ export default ParentComponent
 //   }
 // }
 
-// // Method 2
+// Method 2
 // class Child2 extends React.Component {
 
 //   render() {

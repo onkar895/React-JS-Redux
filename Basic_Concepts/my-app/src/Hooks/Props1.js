@@ -15,7 +15,6 @@ export default ChildComponent
 
 
 // Example 2:
-
 // import React from 'react';
   
 // const Child = (props) => {

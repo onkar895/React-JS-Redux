@@ -13,6 +13,7 @@
 // 3. Hooks are imported at the top of a file from the react library:
 // 4. Syntax:   import React, { useHook } from 'react'
 
+
 // UseState:
 
 // 1. The value returned by useState() consists of an array with two values.
@@ -21,10 +22,13 @@
 // 3. One can always use array destructuring to assign both values at once so that they can be used in the component.
 // 4. Of course, they can also be assigned separately by assigning a variable with useState() and assigning its first index to one variable and
 // its second index to another(destructuring just makes this easier).
+// 5 .A state is a variable which exists inside a component, that cannot be accessed and modified outside the component and can only be used inside the component.
+// 6. State Can be modified using this.setState.
 
-// 5. In functional components useState will be used as :  'useState' only
-// 6. In Class components useState will be used as :  'this.state'
+// 7. In functional components useState will be used as :  'useState' only
+// 8. In Class components useState will be used as :  'this.state'
 
+// Example 1:
 // import React from 'react'
 
 // 1. First, import useState from React for functional component:
