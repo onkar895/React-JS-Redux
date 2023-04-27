@@ -8,6 +8,8 @@ import Hello from './Hooks/Props'
 import Message from './Hooks/UseState'
 import Car from './Hooks/UseState'
 import ExampleClass from './Hooks/Props'
+// import Timer from './Hooks/UseEffect'
+import Use from './Hooks/UseEffect'
 
 // Here App() is a Root function and using Functonal component
 function App () {
@@ -24,7 +26,11 @@ function App () {
       <br/>
       <br/>
       <ExampleClass />
-      <parent/>
+      <parent />
+      <br/>
+      <br/>
+      {/* <Timer /> */}
+      <Use/>
     </div>
   )
 }

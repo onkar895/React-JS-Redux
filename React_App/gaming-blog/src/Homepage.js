@@ -87,7 +87,7 @@
 // export default App
 
 // UseState and Props:
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 // useState: Returns the current state of the component and its setter function.
 import Bloglist from './Bloglist'
 
@@ -103,18 +103,39 @@ const Homepage = () => {
     { title: 'Crusader Kings III', body: 'Crusader Kings III is a grand strategy role-playing video game set in the Middle Ages, developed by Paradox Development Studio', author: 'Manish', id: '8' }
   ])
 
+  const [blogPreview, setPreview] = useState('This is blog preview content')
+
   const deleteBlog = (id) => {
     const newBlogs = blogs.filter(blogs => blogs.id !== id)
     setBlog(newBlogs)
   }
 
+  // useEffect: 
+  // 1. The useEffect Hook allows you to perform side effects in your components.
+  // 2. Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+  // 3. useEffect accepts two arguments. The second argument is optional.
+  // 4. useEffect(<function>, <dependency>)
+
+  useEffect(() => {
+    console.log('State changed/ useEffect triggred')
+  }, [blogPreview]) 
+  // So here I have passed blogPreview to useEffect because useEffect dependeant on that blogPreview value.
+  // so everytime this blogPreview state changes then at that time only useEffect getting triggerd.
+  // So, thats why it is called as a depedency factor of useEffect
+
   return (
-    <div className='home'>
+    <>
       <Bloglist blogs={blogs} title='Gaming Blogs' deleteBlog={deleteBlog} />
       <Bloglist blogs={blogs.filter((blog) => blog.author === 'Onkar')} title="Onkar's Gaming Blogs:" deleteBlog={deleteBlog} />
       {/* filter method Returns the elements of an array that meet the condition specified in a callback function. */}
       <Bloglist blogs={blogs.filter((blog) => blog.author === 'Harshal')} title="Harshal's Gaming Blogs:" deleteBlog={deleteBlog} />
-    </div>
+      <p>
+        {blogPreview}
+      </p>
+      <button onClick={() => setPreview('Updated Preview')}>
+        Click to change the above text   
+      </button>
+    </>
   )
 }
 

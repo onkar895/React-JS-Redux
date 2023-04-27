@@ -1,43 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Navbar';
-import Homepage from './Homepage';
+// import logo from './logo.svg'
+import './App.css'
+import Navbar from './Navbar'
+import Homepage from './Homepage'
 
-
-
-function App() {
-  const subs = 1000;
-  const blogTitle = "Best games of 2023";
-  const blogLikes = 100;
-  const developer = "Full stack web development";
+function App () {
   return (
-    // If we use class instead of className for JSX, we're going to get a warning saying class is an invalid DOM property:
-    <div className="App">
+    // If we use class instead of className for JSX, we're going to get a warning saying, class is an invalid DOM property:
+    <div className='App'>
       <Navbar />
       <Homepage />
-
       <div className='content'>
-        <h2>App Component</h2>
       </div>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <span>Learn React</span>
-
-        <div className="content">
-
-          <p>{blogTitle}</p>
-          <p>Hurrah!, You have got {subs}  subscribers and {blogLikes}  likes.</p>
-          <p>[1,2,3,4,5,6,7,8,9,10]</p>
-          <p>You have completed the {developer} course from LetsUpgrade</p>
-          <a href="https://react.dev/learn">Learn React</a>
-          <br />
-          <a href="{link}">Learn React</a>
-
-        </div>
-
+      <header className='App-header'>
+        <h3>HII, THIS IS A SIMPLE GAMING BLOG</h3>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
