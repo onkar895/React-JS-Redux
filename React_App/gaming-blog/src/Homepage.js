@@ -92,18 +92,21 @@ import { useState, useEffect } from 'react'
 import Bloglist from './Bloglist'
 
 const Homepage = () => {
-  const [blogs, setBlog] = useState([
-    { title: 'Crusader Kings III', body: 'Crusader Kings III is a grand strategy role-playing video game set in the Middle Ages, developed by Paradox Development Studio', author: 'Onkar', id: '1' },
-    { title: "Assassin's Creed Valhalla", body: "Assassin's Creed Valhalla is a 2020 action role-playing video game developed by Ubisoft Montreal and published by Ubisoft.", author: 'Rishi', id: '2' },
-    { title: 'StarCraft II: Wings of Liberty', body: 'StarCraft II: Wings of Liberty is a science fiction real-time strategy video game developed and published by Blizzard Entertainment.', author: 'Onkar', id: '3' },
-    { title: 'The Witcher 3: Wild Hunt', body: 'The Witcher 3: Wild Hunt is a 2015 action role-playing game developed and published by CD Projekt.', author: 'Harshal', id: '4' },
-    { title: "PlayerUnknown's Battlegrounds", body: 'PUBG: Battlegrounds is a battle royale game developed by PUBG Studios and published by Krafton.', author: 'Keshav', id: '5' },
-    { title: 'StarCraft II: Wings of Liberty', body: 'StarCraft II: Wings of Liberty is a science fiction real-time strategy video game developed and published by Blizzard Entertainment.', author: 'Manish', id: '6' },
-    { title: "PlayerUnknown's Battlegrounds", body: 'PUBG: Battlegrounds is a battle royale game developed by PUBG Studios and published by Krafton.', author: 'Harshal', id: '7' },
-    { title: 'Crusader Kings III', body: 'Crusader Kings III is a grand strategy role-playing video game set in the Middle Ages, developed by Paradox Development Studio', author: 'Manish', id: '8' }
-  ])
+//   const [blogs, setBlog] = useState([
+//     { title: 'Crusader Kings III', body: 'Crusader Kings III is a grand strategy role-playing video game set in the Middle Ages, developed by Paradox Development Studio', author: 'Onkar', id: '1' },
+//     { title: "Assassin's Creed Valhalla", body: "Assassin's Creed Valhalla is a 2020 action role-playing video game developed by Ubisoft Montreal and published by Ubisoft.", author: 'Rishi', id: '2' },
+//     { title: 'StarCraft II: Wings of Liberty', body: 'StarCraft II: Wings of Liberty is a science fiction real-time strategy video game developed and published by Blizzard Entertainment.', author: 'Onkar', id: '3' },
+//     { title: 'The Witcher 3: Wild Hunt', body: 'The Witcher 3: Wild Hunt is a 2015 action role-playing game developed and published by CD Projekt.', author: 'Harshal', id: '4' },
+//     { title: "PlayerUnknown's Battlegrounds", body: 'PUBG: Battlegrounds is a battle royale game developed by PUBG Studios and published by Krafton.', author: 'Keshav', id: '5' },
+//     { title: 'StarCraft II: Wings of Liberty', body: 'StarCraft II: Wings of Liberty is a science fiction real-time strategy video game developed and published by Blizzard Entertainment.', author: 'Manish', id: '6' },
+//     { title: "PlayerUnknown's Battlegrounds", body: 'PUBG: Battlegrounds is a battle royale game developed by PUBG Studios and published by Krafton.', author: 'Harshal', id: '7' },
+//     { title: 'Crusader Kings III', body: 'Crusader Kings III is a grand strategy role-playing video game set in the Middle Ages, developed by Paradox Development Studio', author: 'Manish', id: '8' }
+//   ])
+  
+  const [blogs, setBlog] = useState(null);
 
-  const [blogPreview, setPreview] = useState('This is blog preview content')
+
+  // const [blogPreview, setPreview] = useState('This is blog preview content')
 
   const deleteBlog = (id) => {
     const newBlogs = blogs.filter(blogs => blogs.id !== id)
@@ -116,25 +119,47 @@ const Homepage = () => {
   // 3. useEffect accepts two arguments. The second argument is optional.
   // 4. useEffect(<function>, <dependency>)
 
-  useEffect(() => {
-    console.log('State changed/ useEffect triggred')
-  }, [blogPreview]) 
-  // So here I have passed blogPreview to useEffect because useEffect dependeant on that blogPreview value.
+  // useEffect(() => {
+  //   console.log('State changed/ useEffect triggred')
+  // }, [blogPreview]) 
+  // So here above I have passed blogPreview to useEffect because useEffect dependeant on that blogPreview value.
   // so everytime this blogPreview state changes then at that time only useEffect getting triggerd.
   // So, thats why it is called as a depedency factor of useEffect
+  
+  
+  useEffect(() => {
+    fetch(" http://localhost:8000/blogs")
+      .then(resourse => {
+      return resourse.json()
+      })
+      .then(data => {
+        console.log(data)
+        setBlog(data);
+    })
+  }, [ ]
+  )
 
   return (
     <>
-      <Bloglist blogs={blogs} title='Gaming Blogs' deleteBlog={deleteBlog} />
-      <Bloglist blogs={blogs.filter((blog) => blog.author === 'Onkar')} title="Onkar's Gaming Blogs:" deleteBlog={deleteBlog} />
+      {/* <Bloglist blogs={blogs} title='Gaming Blogs' deleteBlog={deleteBlog} /> */}
+
+      {/* <Bloglist blogs={blogs.filter((blog) => blog.author === 'Onkar')} title="Onkar's Gaming Blogs:" deleteBlog={deleteBlog} /> */}
       {/* filter method Returns the elements of an array that meet the condition specified in a callback function. */}
-      <Bloglist blogs={blogs.filter((blog) => blog.author === 'Harshal')} title="Harshal's Gaming Blogs:" deleteBlog={deleteBlog} />
-      <p>
+
+      {/* <Bloglist blogs={blogs.filter((blog) => blog.author === 'Harshal')} title="Harshal's Gaming Blogs:" deleteBlog={deleteBlog} /> */}
+
+      
+      {/* Conditional Templating */}
+      {blogs && <Bloglist blogs={blogs} title="Gaming Blogs" deleteBlog={deleteBlog}/> }
+
+      
+      {/* <p>
         {blogPreview}
-      </p>
-      <button onClick={() => setPreview('Updated Preview')}>
+      </p> */}
+
+      {/* <button onClick={() => setPreview('Updated Preview')}>
         Click to change the above text   
-      </button>
+      </button> */}
     </>
   )
 }
