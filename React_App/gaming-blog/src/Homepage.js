@@ -104,6 +104,9 @@ const Homepage = () => {
 //   ])
   
   const [blogs, setBlog] = useState(null);
+  const [IsFetchPending, setIsFetchPending] = useState(true)
+  // We have created another state here to check whether the feach is pending or not.
+  const [isError, setError] = useState(null);
 
 
   // const [blogPreview, setPreview] = useState('This is blog preview content')
@@ -127,17 +130,35 @@ const Homepage = () => {
   // So, thats why it is called as a depedency factor of useEffect
   
   
+  // JSON Command to write on cmd: 
+// npx json-server --watch dataBase/dataBase.json --port 8000
+  
   useEffect(() => {
-    fetch(" http://localhost:8000/blogs")
-      .then(resourse => {
-      return resourse.json()
+    setTimeout(() => {
+      fetch(" http://localhost:8000/blogs")     // displays a list of blogs fetched from a local server at http://localhost:8000/blogs.
+        .then(response => {
+          console.log(response)
+          if (!response.ok) {
+            throw Error ("Could not fetch the data from the resources!")
+          }
+      return response.json()
       })
       .then(data => {
         console.log(data)
         setBlog(data);
+        setIsFetchPending(false)
+        setError(null)
+      }
+      ).catch(err => {     // Handling error
+        setError(err.message)
+      console.log(err.message)
     })
+    },2000)
+    
   }, [ ]
   )
+  // The useEffect hook is used to fetch the data from the server and update the state of blogs with the fetched data. 
+  // The second argument of useEffect is an empty array[], which means that the effect will only run once when the component mounts.
 
   return (
     <>
@@ -149,8 +170,22 @@ const Homepage = () => {
       {/* <Bloglist blogs={blogs.filter((blog) => blog.author === 'Harshal')} title="Harshal's Gaming Blogs:" deleteBlog={deleteBlog} /> */}
 
       
-      {/* Conditional Templating */}
-      {blogs && <Bloglist blogs={blogs} title="Gaming Blogs" deleteBlog={deleteBlog}/> }
+      {/* Conditional Templating: */}
+      {/* In React, conditional templating is typically achieved using the ternary operator (?:) or the logical && operator.
+      The ternary operator is used to render one of two components based on a condition, while the logical && operator is used to render a component only if a certain condition is true. */}
+
+
+      {/* Conditional Templating for fetch status */}
+      {IsFetchPending && <div><h2>Data is loading....</h2></div>}
+       {/* so here we use conditional templationg beacuse we want to render Data on the browser */}
+      
+          {/* Conditional Templating for error */}
+      {isError && <div><h3>{ isError }</h3></div>}
+       {/* so here we use conditional templationg beacuse we want to render Error message on the browser if there is any error */}
+      
+      {/* Conditional Templating for Bloglist */}
+      {blogs && <Bloglist blogs={blogs} title="Gaming Blogs" deleteBlog={deleteBlog} />}
+      {/* This statement means that the Bloglist component will only be rendered if blogs is truthy (i.e., not null, undefined, false, 0, NaN, or an empty string). */}
 
       
       {/* <p>

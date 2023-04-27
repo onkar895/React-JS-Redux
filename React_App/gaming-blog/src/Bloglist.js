@@ -10,20 +10,20 @@ const Bloglist = ({ blogs, title, deleteBlog }) => {
     <div className='blog-list'>
       <h1>{title}</h1>
       {blogs.map((blog) => (
-                         // The map() method calls the specified function for every array element and returns the new array. This method doesn't change the original array.
-                             <div className="blog-preview" key={blog.id}>
-                                   <h2>Title: {blog.title}</h2>
-                                   <p>Author: {blog.author}</p>
-                                   <p>{blog.body}</p>
-                                   <br />
-                             
-                                   <span>
-                                      <button className="delete-button" onClick={() => deleteBlog(blog.id)}>
-                                          Delete
-                                       </button>
-                                   </span>
-                             </div>
-                        ))}
+                                            // The map() method calls the specified function for every array element and returns the new array. This method doesn't change the original array.
+                                                <div className="blog-preview" key={blog.id}>
+                                                      <h2>Title: {blog.title}</h2>
+                                                      <p>Author: {blog.author}</p>
+                                                      <p>{blog.body}</p>
+                                                      <br />
+                                                
+                                                      <span>
+                                                         <button className="delete-button" onClick={() => deleteBlog(blog.id)}>
+                                                             Delete
+                                                          </button>
+                                                      </span>
+                                                </div>
+                                           ))}
     </div>
   )
 }
