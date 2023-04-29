@@ -1,4 +1,4 @@
-// Updating the screen :
+// Updating the screen using Usestate, UseEffect and Props :
 
 // Often, you’ll want your component to “remember” some information and display it.
 // For example, maybe you want to count the number of times a button is clicked.To do this, add state to your component.
