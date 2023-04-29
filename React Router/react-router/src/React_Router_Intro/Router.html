@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Router</title>
+</head>
+<body>
+    <h1>React Router</h1>
+    <ul>
+        <li>React Router is a JavaScript framework that lets us handle client and server-side routing in React applications. </li>
+        <li><Strong>Why we need React Routers:</Strong></li>
+        <li>It enables the creation of single-page web or mobile apps that allow navigating without refreshing the page. </li>
+        <li>It helps to create anjd navigate between different URLs that make up your web application.</li>
+        <li>It also allows us to use browser history features while preserving the right application view.</li>
+        <li>This library comes in three packages:</li>
+        <ol>
+            <li><strong>react-router: </strong>For core functionality</li>
+            <li><strong>react-router-native: </strong>React Native version</li>
+            <li><strong>react-router-dom: </strong>Recommended for web applications</li>
+        </ol>
+        <li><strong>Install the newest version with npm: </strong> npm install react-router-dom@latest</li>
+        <li>The newest version of React Router is v6.</li>
+        <li>
+           <Strong> Adding React Router Components: </Strong>The main Components of React Router are:</li>
+           <ol>
+            <li><strong>BrowserRouter: </strong> BrowserRouter is a router implementation that uses the HTML5 history API(pushState, replaceState and the popstate event) to keep your UI in sync with the URL. It is the parent component that is used to store all of the other components.</li>
+            <li><strong> Routes: </strong>It’s a new component introduced in the v6 and a upgrade of the component.</li>
+            <li><strong>Route:</strong>Route is the conditionally shown component that renders some UI when its path matches the current URL.</li>
+            <li><strong>Link:</strong>Link component is used to create links to different routes and implement navigation around the application. It works like HTML anchor tag.</li>
+            <li><strong> Add this components to your app.js file in src: </strong>
+                 import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+} from 'react-router-dom';</li>
+   
+           </ol>
+    </ul>
+</body>
+</html>

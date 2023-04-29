@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS",
+    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: rgb(41, 69, 95);
+}
+
+nav a {
+  text-decoration: none;
+  color: aliceblue;
+  margin: 10px;
+  padding: 8px;
+}
+
+/* nav a:hover {
+  background-color: aliceblue;
+  color: black;
+  border-radius: 5px;
+} */
+
+/* nav a.active {
+  text-decoration: none;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 5px;
+} */

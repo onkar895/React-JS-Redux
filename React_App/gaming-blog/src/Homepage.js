@@ -8,6 +8,7 @@
 //     console.log('Hello')
 //   }
 
+// Event:
 // const clickHandler = (e) => {
 //   console.log(e)
 //   console.log(e.target.value)
@@ -86,7 +87,7 @@
 
 // export default App
 
-// UseState and Props:
+// UseState,UseEffect and Props:
 import { useState, useEffect } from 'react'
 // useState: Returns the current state of the component and its setter function.
 import Bloglist from './Bloglist'
@@ -107,6 +108,7 @@ const Homepage = () => {
   const [IsFetchPending, setIsFetchPending] = useState(true)
   // We have created another state here to check whether the feach is pending or not.
   const [isError, setError] = useState(null);
+  // This state is for handling the error if there is any error.
 
 
   // const [blogPreview, setPreview] = useState('This is blog preview content')
