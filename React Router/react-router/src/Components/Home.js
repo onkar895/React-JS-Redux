@@ -13,7 +13,7 @@ const Home = () => {
       <button style={{ backgroundColor: 'rgb(41, 69, 95)',
             color: 'White',
             Padding: '10px',
-            width: '140px',
+            width: '130px',
             height: '40px',
             cursor: 'pointer', 
             borderRadius : '5px'}} onClick={() => navigate('order-summary')}>
