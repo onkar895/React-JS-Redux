@@ -2,6 +2,7 @@ import React from 'react'
 // import { Link } from 'react-router-dom'
 // Link: Link component is used to create links to different routes and implement navigation around the application. It works like HTML anchor tag.
 import { NavLink } from 'react-router-dom'
+import { useAuth } from './Authentication'
 
 // 1. By using Link:
 
@@ -55,6 +56,8 @@ const Navbar = () => {
     }
   }
 
+  const Auth = useAuth()
+
   return (
     <nav>
       <NavLink style={navLinkStyle} to='/'>
@@ -72,6 +75,13 @@ const Navbar = () => {
       <NavLink style={navLinkStyle} to='/users'>
         Users
       </NavLink>
+      <NavLink style={navLinkStyle} to='/profile'>
+        Profile
+      </NavLink>
+      {!Auth.user &&
+       <NavLink style={navLinkStyle} to='/login'>
+         Login
+       </NavLink>}
     </nav>
 
   )

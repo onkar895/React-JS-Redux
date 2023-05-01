@@ -19,13 +19,17 @@ import New from './Components/NewProducts'
 import Users from './Components/Users'
 import UserDeatails from './Components/UserDetails'
 import Admin from './Components/Admin'
+import { Profile } from './Components/Profile'
+import { AuthProvider } from './Components/Authentication'
+import { Login } from './Components/Login'
 
 
 
 function App () {
   return (
     
-    <>
+  <>
+    <AuthProvider>
       <Navbar />
       <Routes>
           {/* Relative links: 
@@ -45,11 +49,13 @@ function App () {
          {/* Dynamic Route: UserDetails:  we can also write nested dyanamic routes to display data on the same page using Outlet */}
         <Route path='users/:userId' element={<UserDeatails />}></Route>
         {/*Here we  includes a dynamic parameter called "userId" that can be used to display information about a specific user. */}
-       <Route path='users/admin' element={<Admin/>}></Route>
-        <Route path='*' element={<NoMatch />}></Route>
-         
+          <Route path='users/admin' element={<Admin />}></Route>
+          <Route path='profile' element={<Profile />}></Route>
+          <Route path='login' element={<Login/>}></Route>
+          <Route path='*' element={<NoMatch />}></Route>
       </Routes>
-    </>
+    </AuthProvider>
+  </>
   )
 }
 
