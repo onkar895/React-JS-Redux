@@ -12,22 +12,48 @@ import About from './Components/About'
 import Contact from './Components/Contact'
 import OrderSummary from './Components/OrderSummary'
 import { NoMatch } from './Components/NoMatch'
+import { Products } from './Components/Products'
+import Featured from './Components/FeaturedProducts'
+import New from './Components/NewProducts'
+
+import Users from './Components/Users'
+import UserDeatails from './Components/UserDetails'
+import Admin from './Components/Admin'
 
 
 
 function App () {
   return (
+    
     <>
       <Navbar />
       <Routes>
+          {/* Relative links: 
+          We are going to use relative links here which does not need to write '/' before url path */}
         <Route path='/' element={<Home />}></Route>
         <Route path='about' element={<About />}></Route>
         <Route path='contact' element={<Contact />}></Route>
         <Route path='order-summary' element={<OrderSummary />}></Route>
-        <Route path='*' element={<NoMatch/>}></Route>
+        
+          {/* Nested Routes : featured and new routes under products route */}
+        <Route path='products' element={<Products />}>
+            {/* <Route index element={<Featured/>}></Route> */}
+            <Route path='featured' element={<Featured />}></Route>
+            <Route path='new' element={<New />}></Route>
+        </Route>
+        <Route path='users' element={<Users />}></Route>
+         {/* Dynamic Route: UserDetails:  we can also write nested dyanamic routes to display data on the same page using Outlet */}
+        <Route path='users/:userId' element={<UserDeatails />}></Route>
+        {/*Here we  includes a dynamic parameter called "userId" that can be used to display information about a specific user. */}
+       <Route path='users/admin' element={<Admin/>}></Route>
+        <Route path='*' element={<NoMatch />}></Route>
+         
       </Routes>
     </>
   )
 }
 
 export default App
+
+// index route:
+// The index route will render when we have not clicked on any one of the links (Featured, or New) in the secondary navigation inside the /products route.

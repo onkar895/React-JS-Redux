@@ -38,3 +38,25 @@ nav a {
   color: black;
   border-radius: 5px;
 } */
+
+.Featured-Products {
+  text-decoration: none;
+  border: 2px solid black;
+  margin: 20px;
+}
+
+.New-Products {
+  text-decoration: none;
+  border: 2px solid black;
+  margin: 20px;
+}
+
+.Set-Button {
+  background-color: "rgb(41, 69, 95)";
+  color: White;
+  padding: "10px";
+  width: "140px";
+  height: "40px";
+  cursor: "pointer";
+  border-radius: "5px";
+}
