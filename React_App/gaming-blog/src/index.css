@@ -23,10 +23,11 @@ code {
   padding: 15px;
   border-bottom: 2px solid black;
   box-shadow: 1px 3px 5px grey;
+  background-color: #667da9;
 }
 
 .Navbar h1 {
-  color: rgb(64, 191, 245);
+  color: rgb(237, 244, 247);
   cursor: pointer;
   padding: 8px;
   margin: 8px;
@@ -53,7 +54,7 @@ code {
 .Navbar a:hover {
   color: rgb(64, 191, 245);
   font-weight: bold;
-  border-bottom: 2px solid rgb(64, 191, 245);
+  border-bottom: 2px solid rgb(221, 243, 253);
   border-radius: 10px;
 }
 
@@ -78,7 +79,8 @@ code {
 }
 
 .blog-preview {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 1000px;
@@ -89,6 +91,7 @@ code {
 
 .blog-preview:hover {
   transition: 0.5s;
+  border: 2px solid rgb(250, 169, 119);
   box-shadow: 5px 3px 5px 3px rgba(70, 15, 15, 0.509);
 }
 
@@ -103,7 +106,9 @@ code {
 }
 
 .blog-list h1 {
-  color: rgb(75, 5, 45);
+  display: flex;
+  justify-content: center;
+  color: rgb(253, 87, 4);
   cursor: pointer;
   padding: 10px;
 }

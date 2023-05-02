@@ -7,24 +7,29 @@
 const Bloglist = ({ blogs, title, deleteBlog }) => {
   // This is a Bloglist functional component that takes in three props: "blogs", "title", and "deleteBlog".
   return (
+    <>
     <div className='blog-list'>
       <h1>{title}</h1>
       {blogs.map((blog) => (
-                                            // The map() method calls the specified function for every array element and returns the new array. This method doesn't change the original array.
-                                                <div className="blog-preview" key={blog.id}>
-                                                      <h2>Title: {blog.title}</h2>
-                                                      <p>Author: {blog.author}</p>
-                                                      <p>{blog.body}</p>
-                                                      <br />
+      // The map() method calls the specified function for every array element and returns the new array. This method doesn't change the original array.
+        <div className="blog-preview" key={blog.id}>
+              <h2>Title: {blog.title}</h2>
+              <p>Author: {blog.author}</p>
+              <p>{blog.body}</p>
+              <br />
                                                 
-                                                      <span>
-                                                         <button className="delete-button" onClick={() => deleteBlog(blog.id)}>
-                                                             Delete
-                                                          </button>
-                                                      </span>
-                                                </div>
-                                           ))}
-    </div>
+              <span>
+                 {/* <button className="delete-button" onClick={() => deleteBlog(blog.id)}>
+                      Delete
+                 </button> */}
+              </span>
+          </div>
+  ))}
+      </div>
+      <div className="App">
+        <h2>This is a Simple Gaming Blog Page</h2>
+      </div>
+      </>
   )
 }
 

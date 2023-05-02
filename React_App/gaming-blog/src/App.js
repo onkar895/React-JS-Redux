@@ -1,20 +1,26 @@
 // import logo from './logo.svg'
 import './App.css'
 import Navbar from './Navbar'
-import Homepage from './Homepage'
+import { About } from './Pages/About'
+import { AllBlogs } from './Pages/AllBlogs'
+import { Contact } from './Pages/Contact'
+import Homepage from './Pages/Homepage'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App () {
   return (
-    // If we use class instead of className for JSX, we're going to get a warning saying, class is an invalid DOM property:
-    <div className='App'>
+
+    <BrowserRouter>
+      {/* Wrapping all the data in BrowserRouter component */}
       <Navbar />
       <Homepage />
-      <div className='content'>
-      </div>
-      <header className='App-header'>
-        <h3>HII, THIS IS A SIMPLE GAMING BLOG</h3>
-      </header>
-    </div>
+      <Routes>
+        <Route exact path='/home' element={<Homepage />}></Route>
+        <Route exact path='/about' element={<About/>}></Route>
+        <Route exact path='/blog' element={<AllBlogs/>}></Route>
+        <Route exact path='/contact' element={<Contact/>}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

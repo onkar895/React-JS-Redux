@@ -1,5 +1,7 @@
 // Example of useSate:
 
+// import useCustomFetch from "../CustomFetch"
+
 // import { useState } from "react"
 // useState: Returns the current state of the component and its setter function.
 
@@ -88,9 +90,10 @@
 // export default App
 
 // UseState,UseEffect and Props:
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 // useState: Returns the current state of the component and its setter function.
-import Bloglist from './Bloglist'
+// import Bloglist from './Bloglist'
+
 
 const Homepage = () => {
 //   const [blogs, setBlog] = useState([
@@ -104,19 +107,20 @@ const Homepage = () => {
 //     { title: 'Crusader Kings III', body: 'Crusader Kings III is a grand strategy role-playing video game set in the Middle Ages, developed by Paradox Development Studio', author: 'Manish', id: '8' }
 //   ])
   
-  const [blogs, setBlog] = useState(null);
-  const [IsFetchPending, setIsFetchPending] = useState(true)
+  // const [blogs, setBlog] = useState(null);
+  // const [IsFetchPending, setIsFetchPending] = useState(true)
   // We have created another state here to check whether the feach is pending or not.
-  const [isError, setError] = useState(null);
+  // const [isError, setError] = useState(null);
   // This state is for handling the error if there is any error.
 
+  // const { datas, IsFetchPending, isError } = useCustomFetch("http://localhost:8000/blogs")
 
   // const [blogPreview, setPreview] = useState('This is blog preview content')
 
-  const deleteBlog = (id) => {
-    const newBlogs = blogs.filter(blogs => blogs.id !== id)
-    setBlog(newBlogs)
-  }
+  // const deleteBlog = (id) => {
+  //   const newBlogs = blogs.filter(blogs => blogs.id !== id)
+  //   setBlog(newBlogs)
+  // }
 
   // useEffect: 
   // 1. The useEffect Hook allows you to perform side effects in your components.
@@ -135,30 +139,30 @@ const Homepage = () => {
   // JSON Command to write on cmd: 
 // npx json-server --watch dataBase/dataBase.json --port 8000
   
-  useEffect(() => {
-    setTimeout(() => {
-      fetch(" http://localhost:8000/blogs")     // displays a list of blogs fetched from a local server at http://localhost:8000/blogs.
-        .then(response => {
-          console.log(response)
-          if (!response.ok) {
-            throw Error ("Could not fetch the data from the resources!")
-          }
-      return response.json()
-      })
-      .then(data => {
-        console.log(data)
-        setBlog(data);
-        setIsFetchPending(false)
-        setError(null)
-      }
-      ).catch(err => {     // Handling error
-        setError(err.message)
-      console.log(err.message)
-    })
-    },2000)
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     fetch(" http://localhost:8000/blogs")     // displays a list of blogs fetched from a local server at http://localhost:8000/blogs.
+  //       .then(response => {
+  //         console.log(response)
+  //         if (!response.ok) {
+  //           throw Error ("Could not fetch the data from the resources!")
+  //         }
+  //     return response.json()
+  //     })
+  //     .then(data => {
+  //       console.log(data)
+  //       setBlog(data);
+  //       setIsFetchPending(false)
+  //       setError(null)
+  //     }
+  //     ).catch(err => {     // Handling error
+  //       setError(err.message)
+  //     console.log(err.message)
+  //   })
+  //   },2000)
     
-  }, [ ]
-  )
+  // }, [ ]
+  // )
   // The useEffect hook is used to fetch the data from the server and update the state of blogs with the fetched data. 
   // The second argument of useEffect is an empty array[], which means that the effect will only run once when the component mounts.
 
@@ -178,17 +182,23 @@ const Homepage = () => {
 
 
       {/* Conditional Templating for fetch status */}
-      {IsFetchPending && <div><h2>Data is loading....</h2></div>}
+      {/* {IsFetchPending && <div><h2>Data is loading....</h2></div>} */}
        {/* so here we use conditional templationg beacuse we want to render Data on the browser */}
       
           {/* Conditional Templating for error */}
-      {isError && <div><h3>{ isError }</h3></div>}
+      {/* {isError && <div><h3>{ isError }</h3></div>} */}
        {/* so here we use conditional templationg beacuse we want to render Error message on the browser if there is any error */}
       
       {/* Conditional Templating for Bloglist */}
-      {blogs && <Bloglist blogs={blogs} title="Gaming Blogs" deleteBlog={deleteBlog} />}
+      {/* {datas && <Bloglist blogs={datas} title="Gaming Blogs" deleteBlog={deleteBlog} />} */}
       {/* This statement means that the Bloglist component will only be rendered if blogs is truthy (i.e., not null, undefined, false, 0, NaN, or an empty string). */}
 
+      <h2>Welcome to Gaming Community</h2>
+      <p>Gaming is not just fun, exciting, and entertaining. It has amazing benefits too for people of different ages.
+        Accordingly, it improves memory and drives quick decision-making. As gaming can motivate players to take risks and persevere through failures, it can contribute to man’s ability to handle difficult situations.
+        With that in mind, we don’t need to wonder why numerous gaming apps, devices, and blogs are emerging in the market these days.
+        Fortunately, you can find ample gaming blogs that do not just offer fantastic, useful news and articles but are truly user-friendly.</p>
+      
       
       {/* <p>
         {blogPreview}

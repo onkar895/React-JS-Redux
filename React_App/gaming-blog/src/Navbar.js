@@ -1,22 +1,36 @@
-const navbar = () => {
-    return (
-        <nav className="Navbar">
-            <h1>Gaming Blog</h1>
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-            <div className="links">
-                <a href="./" style={{            // Inline styling for blog,  blue curly-bracket is for the dynamic values and yellow is for the objects means key value pairs.
-                    color: "rgb(64, 191, 245)",
-                    fontWeight: "bold",
-                    borderBottom: "2px solid rgb(64, 191, 245)",
-                    borderRadius: "10px"
-                }}>Home</a>
+const Navbar = () => {
 
-                < a href="./">Blog</a>
-                <a href="./">About Us</a>
-                <a href="./">Contact Us</a>
-            </div>
-        </nav>
-    )
+  const navLinkStyle = ({ isActive }) => {
+    return {
+      backgroundColor: isActive ? 'Black' : ' ',
+      color: isActive ? 'White' : 'Black ',
+      borderRadius: isActive ? '5px' : ' '
+
+    }
+  }
+
+  return (
+    <nav className='Navbar'>
+      <h1>Gaming Blog</h1>
+      <div className='links'>
+        <NavLink style={navLinkStyle} to='/home'>
+          Home
+        </NavLink>
+        <NavLink style={navLinkStyle} to='/blog'>
+          Blog
+        </NavLink>
+        <NavLink style={navLinkStyle} to='/about'>
+          About Us
+        </NavLink>
+        <NavLink style={navLinkStyle} to='/contact'>
+          Contact Us
+        </NavLink>
+      </div>
+    </nav>
+  )
 }
 
-export default navbar;
+export default Navbar
