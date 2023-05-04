@@ -1,5 +1,7 @@
 // import logo from './logo.svg'
 import './App.css'
+import BlogDetails from './BlogDetails'
+import Create from './Create'
 import Navbar from './Navbar'
 import { About } from './Pages/About'
 import { AllBlogs } from './Pages/AllBlogs'
@@ -18,7 +20,9 @@ function App () {
         <Route exact path='/home' element={<Homepage />}></Route>
         <Route exact path='/about' element={<About/>}></Route>
         <Route exact path='/blog' element={<AllBlogs/>}></Route>
-        <Route exact path='/contact' element={<Contact/>}></Route>
+        <Route exact path='/contact' element={<Contact />}></Route>
+        <Route exact path='/blog-details/:id' element={<BlogDetails />}></Route>
+        <Route exact path='/create' element={<Create/>}></Route>
       </Routes>
     </BrowserRouter>
   )

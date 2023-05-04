@@ -8,7 +8,7 @@ export const AllBlogs = () => {
 
     return(
         <>
-            <div>
+            <div className='Allblog'>
                 <h2>Checking out this list and setting your goals in building the finest gaming blog.</h2>
                
                 {/* Conditional Templating for fetch status */}

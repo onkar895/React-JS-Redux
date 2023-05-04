@@ -192,13 +192,14 @@ const Homepage = () => {
       {/* Conditional Templating for Bloglist */}
       {/* {datas && <Bloglist blogs={datas} title="Gaming Blogs" deleteBlog={deleteBlog} />} */}
       {/* This statement means that the Bloglist component will only be rendered if blogs is truthy (i.e., not null, undefined, false, 0, NaN, or an empty string). */}
-
+       
+      <div className="Homepage">
       <h2>Welcome to Gaming Community</h2>
       <p>Gaming is not just fun, exciting, and entertaining. It has amazing benefits too for people of different ages.
         Accordingly, it improves memory and drives quick decision-making. As gaming can motivate players to take risks and persevere through failures, it can contribute to man’s ability to handle difficult situations.
         With that in mind, we don’t need to wonder why numerous gaming apps, devices, and blogs are emerging in the market these days.
         Fortunately, you can find ample gaming blogs that do not just offer fantastic, useful news and articles but are truly user-friendly.</p>
-      
+       </div>
       
       {/* <p>
         {blogPreview}

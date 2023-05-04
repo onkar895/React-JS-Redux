@@ -4,25 +4,44 @@
 // 3. Parent components can pass props to their child components, but not the other way around.
 // 4. Props can be many data types, including: Numbers, Strings, Functions, Objects
 
-const Bloglist = ({ blogs, title, deleteBlog }) => {
+import { Link } from "react-router-dom"
+
+const Bloglist = ({ blogs, title }) => {
   // This is a Bloglist functional component that takes in three props: "blogs", "title", and "deleteBlog".
+
+  const deleteBlog = (blogs) => {
+      fetch('http://localhost:8000/blogs/' + blogs.id , {
+            method: 'DELETE',
+       
+        }).then(() => {
+               console.log("Blog Deleted Successfully")
+       
+          }).catch((error) => {
+      console.error('Failed to delete blog:', error)
+    })
+   }
+
   return (
     <>
     <div className='blog-list'>
       <h1>{title}</h1>
       {blogs.map((blog) => (
       // The map() method calls the specified function for every array element and returns the new array. This method doesn't change the original array.
+        
         <div className="blog-preview" key={blog.id}>
+          <Link to = {`/blog-details/${blog.id}`}>
               <h2>Title: {blog.title}</h2>
               <p>Author: {blog.author}</p>
-              <p>{blog.body}</p>
+            <p>{blog.body}</p>
+          
               <br />
                                                 
-              <span>
-                 {/* <button className="delete-button" onClick={() => deleteBlog(blog.id)}>
-                      Delete
-                 </button> */}
-              </span>
+                <span>
+                 <button className="delete-button" onClick={() => deleteBlog(blog.id)}>
+                      Delete Blog
+                 </button>
+                </span>
+          </Link>
           </div>
   ))}
       </div>

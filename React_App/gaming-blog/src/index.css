@@ -34,10 +34,10 @@ code {
 }
 
 .Navbar h1:hover {
-  color: rgb(24, 180, 247);
-  border-bottom: 5px solid rgb(64, 191, 245);
+  color: rgb(244, 249, 251);
+  border-bottom: 5px solid rgb(199, 232, 247);
   border-radius: 10px;
-  background-color: rgb(239, 252, 252);
+  background-color: rgb(7, 7, 7);
   transition: 1s;
 }
 
@@ -79,9 +79,7 @@ code {
 }
 
 .blog-preview {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  text-align: center;
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
@@ -96,6 +94,7 @@ code {
 }
 
 .blog-preview h2 {
+  text-decoration: none;
   color: rgb(95, 7, 47);
 }
 
@@ -120,4 +119,89 @@ code {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+.Homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  border: 1px solid;
+}
+
+.Allblog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-details h2 {
+  color: rgb(253, 87, 4);
+}
+
+.blog-details h3 {
+  color: rgb(95, 7, 47);
+}
+
+.blog-details article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 1200px;
+  height: 150px;
+  margin: 0 auto;
+  padding: 5px 10px;
+  border: 1px solid rgb(248, 184, 89);
+}
+
+article:hover {
+  transition: 0.5s;
+  border: 2px solid rgb(250, 169, 119);
+  box-shadow: 5px 3px 5px 3px rgba(70, 15, 15, 0.509);
+}
+
+.create-blog {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.create-blog label {
+  text-align: left;
+  display: block;
+}
+
+.create-blog input,
+textarea,
+select {
+  width: 100%;
+  padding: 2%;
+  margin: 2%;
+  border: 2px solid burlywood;
+}
+
+.create-blog button {
+  background-color: rgb(240, 164, 66);
+  color: rgb(253, 247, 247);
+  border: 0;
+  border-radius: 5px;
+  padding: 2%;
+  cursor: pointer;
+}
+
+.create-blog h2 {
+  font-size: 1.6em;
+  color: rgb(240, 167, 70);
 }

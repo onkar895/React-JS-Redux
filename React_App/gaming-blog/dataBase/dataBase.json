@@ -1,15 +1,59 @@
 {
-    "blogs": [
-    { "title": "Crusader Kings III", "body": "Crusader Kings III is a grand strategy role-playing video game set in the Middle Ages, developed by Paradox Development Studio", "author": "Onkar", "id": "1" },
-    { "title": "Assassin's Creed Valhalla", "body": "Assassin's Creed Valhalla is a 2020 action role-playing video game developed by Ubisoft Montreal and published by Ubisoft.", "author": "Rishi", "id": "2" },
-    { "title": "StarCraft II: Wings of Liberty", "body": "StarCraft II: Wings of Liberty is a science fiction real-time strategy video game developed and published by Blizzard Entertainment.", "author": "Onkar", "id": "3" },
-    { "title": "The Witcher 3: Wild Hunt", "body": "The Witcher 3: Wild Hunt is a 2015 action role-playing game developed and published by CD Projekt.", "author": "Harshal", "id": "4"},
-    { "title": "PlayerUnknown's Battlegrounds", "body": "PUBG: Battlegrounds is a battle royale game developed by PUBG Studios and published by Krafton", "author": "Keshav", "id": "5" },
-    { "title": "Assassin's Creed Valhalla", "body": "Assassin's Creed Valhalla is a 2020 action role-playing video game developed by Ubisoft Montreal and published by Ubisoft.", "author": "Onkar", "id": "6" },
-    { "title": "The Witcher 2: Wild Hunt", "body": "The Witcher 3: Wild Hunt is a 2015 action role-playing game developed and published by CD Projekt.", "author": "Manish", "id": "7"},
-    { "title": "Crusader Kings III", "body": "Crusader Kings III is a grand strategy role-playing video game set in the Middle Ages, developed by Paradox Development Studio", "author": "Rishi", "id": "8" }
+  "blogs": [
+    {
+      "title": "Crusader Kings III",
+      "body": "Crusader Kings III is a grand strategy role-playing video game set in the Middle Ages, developed by Paradox Development Studio",
+      "author": "Onkar",
+      "id": "1"
+    },
+    {
+      "title": "Assassin's Creed Valhalla",
+      "body": "Assassin's Creed Valhalla is a 2020 action role-playing video game developed by Ubisoft Montreal and published by Ubisoft.",
+      "author": "Rishi",
+      "id": "2"
+    },
+    {
+      "title": "StarCraft II: Wings of Liberty",
+      "body": "StarCraft II: Wings of Liberty is a science fiction real-time strategy video game developed and published by Blizzard Entertainment.",
+      "author": "Onkar",
+      "id": "3"
+    },
+    {
+      "title": "The Witcher 3: Wild Hunt",
+      "body": "The Witcher 3: Wild Hunt is a 2015 action role-playing game developed and published by CD Projekt.",
+      "author": "Harshal",
+      "id": "4"
+    },
+    {
+      "title": "PlayerUnknown's Battlegrounds",
+      "body": "PUBG: Battlegrounds is a battle royale game developed by PUBG Studios and published by Krafton",
+      "author": "Keshav",
+      "id": "5"
+    },
+    {
+      "title": "Assassin's Creed Valhalla",
+      "body": "Assassin's Creed Valhalla is a 2020 action role-playing video game developed by Ubisoft Montreal and published by Ubisoft.",
+      "author": "Onkar",
+      "id": "6"
+    },
+    {
+      "title": "The Witcher 2: Wild Hunt",
+      "body": "The Witcher 3: Wild Hunt is a 2015 action role-playing game developed and published by CD Projekt.",
+      "author": "Manish",
+      "id": "7"
+    },
+    {
+      "title": "Crusader Kings III",
+      "body": "Crusader Kings III is a grand strategy role-playing video game set in the Middle Ages, developed by Paradox Development Studio",
+      "author": "Rishi",
+      "id": "8"
+    },
+    {
+      "title": " Apex Legend",
+      "preview": " This is a Preview of Apex Legend",
+      "author": "Harshal",
+      "body": " Apex Legends is a free-to-play hero shooter game where legendary competitors battle for glory, fame, and fortune on the fringes of the Frontier.",
+      "id": "pqoYXCn"
+    }
   ]
 }
-
-
-
