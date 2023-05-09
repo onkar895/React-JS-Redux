@@ -8,6 +8,7 @@
 //     Sometimes you will want to add a little JavaScript logic or reference a dynamic property inside that markup.In this situation, you can use curly braces in your JSX to “open a window” to JavaScript:
 
 import React from 'react'
+
 const person = {
   name: 'Gregorio Y. Zara',
   theme: {

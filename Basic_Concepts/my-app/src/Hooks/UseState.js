@@ -60,7 +60,7 @@
 // export default MyButton
 
 // Example 2:
-// Finctional component:
+// Functional component:
 
 // import { useState } from "react"
 // useState: Returns the current state of the component and its setter function.
