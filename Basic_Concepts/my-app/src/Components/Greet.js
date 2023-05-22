@@ -1,4 +1,4 @@
-// In react, We have to component types:
+// In react, We have two component types:
 //         1. Stateless Functional Component
 //         2. Stateful Class Component.
 

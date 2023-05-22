@@ -12,7 +12,7 @@
 import React, { Component } from 'react'
 
 class Welcome extends Component {
-  render () {
+  render () { // Here render() method returning html
     return <h1>Class Component</h1>
   }
 }
