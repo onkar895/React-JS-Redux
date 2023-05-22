@@ -18,7 +18,10 @@ code {
 .Navbar {
   display: flex;
   align-items: center;
-  width: 0 auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 18px;
   margin: 0 auto;
   padding: 15px;
   border-bottom: 2px solid black;
@@ -42,7 +45,7 @@ code {
 }
 
 .Navbar .links {
-  margin-left: auto;
+  margin-left: 780px;
 }
 
 .Navbar a {
@@ -126,9 +129,8 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  margin: 10px;
-  border: 1px solid;
+  text-align: start;
+  margin: 80px 20px;
 }
 
 .Allblog {

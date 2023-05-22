@@ -198,7 +198,11 @@ const Homepage = () => {
       <p>Gaming is not just fun, exciting, and entertaining. It has amazing benefits too for people of different ages.
         Accordingly, it improves memory and drives quick decision-making. As gaming can motivate players to take risks and persevere through failures, it can contribute to man’s ability to handle difficult situations.
         With that in mind, we don’t need to wonder why numerous gaming apps, devices, and blogs are emerging in the market these days.
-        Fortunately, you can find ample gaming blogs that do not just offer fantastic, useful news and articles but are truly user-friendly.</p>
+          Fortunately, you can find ample gaming blogs that do not just offer fantastic, useful news and articles but are truly user-friendly.</p>
+        <span>Gaming is not just fun, exciting, and entertaining. It has amazing benefits too for people of different ages.
+        Accordingly, it improves memory and drives quick decision-making. As gaming can motivate players to take risks and persevere through failures, it can contribute to man’s ability to handle difficult situations.
+        With that in mind, we don’t need to wonder why numerous gaming apps, devices, and blogs are emerging in the market these days.
+        Fortunately, you can find ample gaming blogs that do not just offer fantastic, useful news and articles but are truly user-friendly.</span>
        </div>
       
       {/* <p>
