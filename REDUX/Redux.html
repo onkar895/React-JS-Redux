@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDUX</title>
+</head>
+<body>
+
+    <h1 style="color:red">Introduction to Redux:</h1>
+
+    <ul>
+        <h2 style="color: blue;">1.REDUX:</h2>
+        <li>Redux is a JavaScript library for managing application state.</li>
+        <li>Redux is a predictable state container for JavaScript applications.</li>
+        <li>It helps you write apps that behave consistently, run in different environments(client, server, and native), and are easy to test.</li>
+        <li>Redux manages an application’s state with a single global object called Store.</li>
+        <li>Redux can be used with any JavaScript framework or library.</li>
+
+        <h2 style="color: blue;">2.WHY REDUX:</h2>
+        <li>State transfer between components is pretty messy in React since it is hard to keep track of which component the data is coming from.</li>
+        <li> It becomes really complicated if users are working with a large number of states within an application.</li>
+        <li> Redux solves the state transfer problem by storing all of the states in a single place called a store.</li>
+        <li> So, managing and transferring states becomes easier as all the states are stored in the same convenient store.</li>
+        <li> Every component in the application can then directly access the required state from that store.</li>
+
+        <h2 style="color: blue;">3.PILLARS OF REDUX:</h2>
+        <li><strong style="color: rgb(244, 144, 4);">Store:</strong> 
+            <ul>
+                <li>A store is an object that holds the application's state tree.</li>
+                <li>There should only be a single store in a Redux app, as the composition happens at the reducer level.</li>
+                <li>getState() : returns the current state of the store.</li>
+                <li>dispatch() : dispatches an action. It is the only way to update the application state.</li>
+                <li>subscribe() : subscribes a change listener to the state.</li>
+                <li>unsubscribe() : is useful when you no longer want to call your listener method when the state changes.</li>
+            </ul>
+        </li>
+        <li><strong style="color: rgb(244, 144, 4);">Action:</strong>
+            <ul>
+                <li>An action is a plain javascript object that represents an intention to change the state.</li>
+                <li>Actions are payloads of information that send data from your application to your store.</li>
+                <li>And actions are the only way your appliaction can interact with the store.</li>
+                <li>It carries some information from the app to the redux store.</li>
+                <li>Actions must have a type property, that describes something that has happened in a particular app (indicating the type of action being performed.)</li>
+            </ul>
+        </li>
+        <li><strong style="color: rgb(244, 144, 4);">Reducers:</strong>
+            <ul>
+                <li>Reducers are pure functions that specify how the application's state changes in response to actions sent to the store.</li>
+                <li>Actions only describe what happened, not how the application's state changes.</li>
+                <li>A reducer is a function that accepts the current state and action as a argument, and returns a new state with the action performed.</li>
+                <li>combineReducers() utility can be used to combine all the reducers in the app into a single index reducer which makes maintainability much easier.</li>
+            </ul>
+        </li>
+
+        <h2 style="color: blue;">HOW DOES STORE, ACTION AND REDUCERS EXACTLY WORK:</h2>
+        <li>So 1st let's start with simple javascript application.</li>
+        <li>The state of the appliaction is maintained in the redux <strong style="color: rgb(244, 144, 4);">"STORE"</strong></li>
+        <li>Our application is always subscribe to this redux-tool but that redux-tool can't update the state</li>
+        <li>If it has to update the state, it needs to <u>dispatch</u> the particular <strong style="color: rgb(244, 144, 4);">"ACTION"</strong></li>
+        <li><strong style="color: rgb(244, 144, 4);">"REDUCER"</strong> then handles that action and updates the current state.</li>
+        <li>As soon as  the state is updated, the value is then passed to the main javascript application.</li>
+    </ul>
+
+    <ul>
+        <h2 style="color: blue;">4.REDUX-TOOLKIT:</h2>
+        <li>Redux Toolkit is a set of tools that helps simplify Redux development.</li>
+        <li>It includes utilities for creating and managing Redux stores, as well as for writing Redux actions and reducers.</li>
+
+        <h2 style="color: blue;">Why You Should Use Redux Toolkit :</h2>
+        <li>Redux Toolkit makes it easier to write good Redux applications and speeds up development, by providing good default behaviors, 
+             catching mistakes, and allowing you to write simpler code.</li>
+
+        <h2 style="color: blue;">Redux Toolkit includes:</h2>
+        <li><strong style="color: rgb(244, 144, 4);">configureStore() :</strong>
+            <ul>
+                <li>It wraps 'createStore' function to provide simplified configuration options and good defaults.</li>
+                <li>It provides automatic support for Redux-thunk, Redux DevTools Extension, and also passes the default middleware.</li>
+            </ul>
+        </li>
+
+        <li><strong style="color: rgb(244, 144, 4);">createSlice() :</strong>
+            <ul>
+                <li>It accepts an object of reducer functions, a slice name, and an initial state value, and automatically generates a slice reducer with
+                     corresponding action creators and action types.</li>
+            </ul>
+        </li>
+
+        <li><strong style="color: rgb(244, 144, 4);">createAsyncThunk :</strong>
+            <ul>
+                <li>It accepts an action type string and a function that returns a promise, and generates a thunk that dispatches  'pending / fulfilled / rejected'
+                     action types based on that promise.</li>
+            </ul>
+        </li>
+
+        <li><strong style="color: rgb(244, 144, 4);">createAction() : </strong>
+            <ul>
+                <li>It generates an action creator function for the given action type string.</li>
+                <li>The function itself has toString() defined, so that it can be used in place of the type constant.</li>
+            </ul>
+        </li>
+    </ul>
+    
+</body>
+</html>

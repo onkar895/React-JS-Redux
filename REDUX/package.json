@@ -1,0 +1,19 @@
+{
+  "name": "kfcredux",
+  "version": "0.1.1",
+  "description": "This is a redux-toolkit tutorial with kfc as a example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
+    "immer": "^10.0.2",
+    "node": "^20.2.0",
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6"
+  }
+}
