@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "axios": "^1.4.0",
+    "immer": "^10.0.2",
+    "react": "^18.2.0",
+    "react-redux": "^8.1.1",
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.2"
+  },
+  "name": "redux_code_evolution",
+  "version": "0.0.1",
+  "description": "This is a redux tutorial with  code evolution channel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
