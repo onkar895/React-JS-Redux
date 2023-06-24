@@ -56,8 +56,8 @@
 
         <h2 style="color: blue;">HOW DOES STORE, ACTION AND REDUCERS EXACTLY WORK:</h2>
         <li>So 1st let's start with simple javascript application.</li>
-        <li>The state of the appliaction is maintained in the redux <strong style="color: rgb(244, 144, 4);">"STORE"</strong></li>
-        <li>Our application is always subscribe to this redux-tool but that redux-tool can't update the state</li>
+        <li>The state of the appliaction is maintained seperately in the redux <strong style="color: rgb(244, 144, 4);">"STORE"</strong></li>
+        <li>Our application is always subscribe to this redux store but that redux-store can't update the state</li>
         <li>If it has to update the state, it needs to <u>dispatch</u> the particular <strong style="color: rgb(244, 144, 4);">"ACTION"</strong></li>
         <li><strong style="color: rgb(244, 144, 4);">"REDUCER"</strong> then handles that action and updates the current state.</li>
         <li>As soon as  the state is updated, the value is then passed to the main javascript application.</li>

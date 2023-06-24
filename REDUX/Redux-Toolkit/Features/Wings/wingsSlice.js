@@ -25,7 +25,6 @@ const wingsSlice = createSlice({
     restocked: (state, action) => {
       state.numberOfWings += action.payload
     }
-
   }
 })
 

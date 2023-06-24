@@ -1,4 +1,5 @@
 // Async Actions:
+// Async API calls to fetch data from an end point and use that data in your application.
 
 // 1. Action dispatched -> state is updated
 
@@ -23,7 +24,7 @@
 
 // 2. case FETCH_USER_SUCCESS :
 //  loading : false
-// error : { from API }
+// users : data { from API }
 
 // 3. case FETCH_USER_ERROR :
 //  loading : false
@@ -53,6 +54,7 @@ const initialState = {
   error: ' '
 }
 
+// Defining string constants
 const FETCH_USER_REQUEST = 'FETCH_USER_REQUEST '
 const FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS'
 const FETCH_USER_ERROR = 'FETCH_USER_ERROR'
@@ -93,7 +95,7 @@ const reducer = (store = initialState , action) => {
       return {
         loading: false,
         users: action.payload,
-        errror: ' '
+        error: ' '
       }
     case FETCH_USER_ERROR:
       return {

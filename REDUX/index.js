@@ -38,7 +38,7 @@ const logger = reduxLogger.createLogger()
 
 //     1. Actions are the only way your appliaction can interact with the store.
 //     2. It carries some information from the app to the redux store.
-//     3. It must have a 'type property', that describes something that has happened in a particular app.
+//     3. It must have a 'type property', that describes something that indicates the type of action being performed.
 
 console.log("This is KFC example");
 
@@ -193,7 +193,7 @@ const unsubscribe = store.subscribe(() => { }
 // store.dispatch(restockWings(4));
 
 
-// Using bindActionCreators which is used to automatically bind action creators with the dispatch function from the Redux store.
+// Using bindActionCreators :  which is used to automatically bind action creators with the dispatch function from the Redux store.
 const actions = bindActionCreators({ orderWings, restockWings, orderCoke, restockCoke }, store.dispatch)
 actions.orderWings()
 actions.orderCoke()
