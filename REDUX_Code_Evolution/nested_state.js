@@ -2,6 +2,8 @@ const redux = require('redux')
 
 const createStore = redux.createStore
 
+// Immer is a library that simplifies the process of writing immutable update logic. 
+// Immer provides a function called produce, which accepts two arguments: your original state, and a callback function.
 const produce = require('immer').produce
 
 const initialstate = {
@@ -33,7 +35,7 @@ const Reducer = (state = initialstate , action) => {
       //     }
       // }
       return produce(state, (draft) => { // Produce (Current state , function which recives the draft copy of the state)
-        draft.Address.city = action.payload // What immer is used to do is that it updates the draft state as if state is mutable
+        draft.Address.city = action.payload // What immer is used to do is that it updates the draft state as if state is mutable.
       })
     default: {
       return state
