@@ -1,4 +1,11 @@
-// 1.  If we use redux in react application then use import redux as 'redux'
+// Three Principles :
+// 1. The global state of your application is stored as an object inside a single store.
+//     That means maintain our application statein a single object which would be managed by the redux store.
+// 2. The only way to change the state is to dispatch an action, an object that describes what happened.
+// 3. To specify how the state tree is updated based on actions, you write pure reducers.
+
+
+// 1. If we use redux in react application then use import redux as 'redux'
 // 2. If we use redux in node JS application then use const redux = require('redux')
 
 // import redux as 'redux'
@@ -11,6 +18,10 @@ const createStore = redux.createStore
 // Handling multiple reducers at a time
 const combineReducers = redux.combineReducers
 
+// helper function : bindActionCreators
+const bindActionCreators = redux.bindActionCreators
+// 1. It is used to automatically bind action creators with the dispatch function from the Redux store.
+// 2. The purpose of bindActionCreators is to simplify the process of dispatching actions by reducing the need for manually calling dispatch for each action.
 
 // Middleware :
 // It is used to add how you extend redux with additional functionality.
@@ -154,17 +165,31 @@ console.log('Initial state', store.getState())
 // 4. Register listenerns via subscribe(listener)
 // The subscribe method allows you to listen for changes to the store's state and execute a callback function whenever the state is updated
 const unSubscribe = store.subscribe(() => { })
+
+
+// Using bindActionCreators :  which is used to automatically bind action creators with the dispatch function from the Redux store.
+const actions = bindActionCreators({ buyCake, buyIceCreame, reStockCake, reStockIceCreame }, store.dispatch)
+
+actions.buyCake()
+actions.buyCake()
+actions.buyIceCreame()
+actions.buyCake()
+actions.buyIceCreame()
+actions.buyIceCreame()
+actions.reStockCake(3)
+actions.reStockIceCreame(3)
+
+
 // 3. Allows state to be updates via dispatch(action)
 // As soon a s action is dispatched , the state will gets immediately updated.
-store.dispatch(buyCake())
-store.dispatch(buyIceCreame())
-store.dispatch(buyCake())
-store.dispatch(buyIceCreame())
-store.dispatch(buyCake())
-store.dispatch(buyIceCreame())
+// store.dispatch(buyCake())
+// store.dispatch(buyIceCreame())
+// store.dispatch(buyCake())
+// store.dispatch(buyIceCreame())
+// store.dispatch(buyCake())
+// store.dispatch(buyIceCreame())
+// store.dispatch(reStockCake(3))
+// store.dispatch(reStockIceCreame(3))
 
-store.dispatch(reStockCake(3))
-
-store.dispatch(reStockIceCreame(3))
 // 5. Finally, the unsubscribe() function is called to stop listening for further state updates.
 unSubscribe()
